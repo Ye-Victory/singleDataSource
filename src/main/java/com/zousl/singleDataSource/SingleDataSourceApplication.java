@@ -39,7 +39,8 @@ public class SingleDataSourceApplication implements CommandLineRunner {
 	}
 
 	private void showData() {
-		jdbcTemplate.queryForList("SELECT * FROM user")
-				.forEach(row -> log.info(row.toString()));
+		log.info(String.valueOf(jdbcTemplate.queryForList("SELECT * FROM cmha_bda_category")));
+//        jdbcTemplate.queryForList("SELECT * FROM user")
+//                .forEach(row -> log.info(row.toString()));
 	}
 }
